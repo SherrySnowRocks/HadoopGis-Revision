@@ -24,7 +24,7 @@ Please refer to http://bmidb.cs.stonybrook.edu/hadoopgis/examples to find relate
  ```
 should be changed into:
 ```
-./build/bin/queryprocessor_2d --querytype partition --geom1 5 \
+./build/bin/queryprocessor_2d --querytype partition --geom1 2 \
     --input1 YOUR_HDFS_PATH/tweets/rawdata/tweets.filtered.tsv \
     --outputpath YOUR_HDFS_PATH/tweetspartitioned --partitioner bsp_2d -s 0.1 --numreducers 10
 ```
@@ -36,5 +36,5 @@ should be changed into:
 ```
 should be changed into:
 ```
-./build/bin/queryprocessor_2d --querytype containment --containrange "-124.7 24.5 67.0 49.5" --geom1 2 --input1 YOUR_HDFS_PATH/tweetspartitioned --outputpath YOUR_HDFS_PATH/containmentout -p st_within
+./build/bin/queryprocessor_2d --querytype containment --containrange "-124.7 24.5 -67.0 49.5" --geom1 2 --input1 YOUR_HDFS_PATH/tweetspartitioned --outputpath YOUR_HDFS_PATH/containmentout -p st_within
 ```
